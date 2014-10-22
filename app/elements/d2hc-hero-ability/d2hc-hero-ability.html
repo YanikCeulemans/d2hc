@@ -1,0 +1,22 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/core-tooltip/core-tooltip.html">
+
+<polymer-element name="d2hc-hero-ability" attributes="src alt">
+  <template>
+    <link rel="stylesheet" href="d2hc-hero-ability.css">
+    <core-tooltip position="right">
+        <img src="{{src}}" alt="{{alt}}" />
+        <content select="[tip]"></content>
+    </core-tooltip>
+  </template>
+  <script>
+    (function () {
+      'use strict';
+
+      Polymer({
+        // define element prototype here
+      });
+
+    })();
+  </script>
+</polymer-element>
