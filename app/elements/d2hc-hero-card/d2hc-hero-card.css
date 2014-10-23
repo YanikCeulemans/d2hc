@@ -1,7 +1,21 @@
 :host {
-  display: block;
+  display: inline-block;
+  background-color: #151515;
+  box-shadow: 0 0 50px 5px #77ABFF;
 }
 
-:host .portrait{
-	display: block;
+:host .name-container {
+	padding: 10px;
+}
+
+:host .hero-name {
+	color: #ececec;
+	margin: 0;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+:host .hero-abilities-wrapper {
+	padding-top: 20px;
+	padding-bottom: 10px;
 }

@@ -4,32 +4,44 @@
 <polymer-element name="d2hc-hero-card" attributes="">
   <template>
     <link rel="stylesheet" href="d2hc-hero-card.css">
-    <h1 class="giga">Earth Spirit</h1>
-    <img src="../../images/es_portrait.jpg" alt="Hero image" class="portrait">
-    <d2hc-hero-ability src="../../images/es_ability_01.jpg" alt="es kick">
-        <div class="tooltip-wrapper" tip>
-            <h2>Earth spirit kick</h2>
-            <p>Kicks any unit in the specified direction for x amount of units</p>
+    <div layout vertical center>
+        <div class="name-container" self-start>
+            <h2 class="hero-name">Earth Spirit</h2>
         </div>
-    </d2hc-hero-ability>
-    <d2hc-hero-ability src="../../images/es_ability_02.jpg" alt="es kick">
-        <div class="tooltip-wrapper" tip>
-            <h2>Earth spirit kick</h2>
-            <p>Kicks any unit in the specified direction for x amount of units</p>
+        <img src="../../images/es_portrait.jpg" alt="Hero image" class="portrait">
+        <div layout horizontal class="hero-abilities-wrapper">
+            <d2hc-hero-ability src="../../images/es_ability_01.jpg" alt="es kick">
+            <div class="tooltip-wrapper" tip>
+                <h2>Earth spirit kick</h2>
+                <p>Kicks any unit in the specified direction for x amount of units</p>
+            </div>
+            </d2hc-hero-ability>
+            <d2hc-hero-ability src="../../images/es_ability_02.jpg" alt="es kick">
+                <div class="tooltip-wrapper" tip>
+                    <h2>Earth spirit kick</h2>
+                    <p>Kicks any unit in the specified direction for x amount of units</p>
+                </div>
+            </d2hc-hero-ability>
+            <d2hc-hero-ability src="../../images/es_ability_03.jpg" alt="es kick">
+                <div class="tooltip-wrapper" tip>
+                    <h2>Earth spirit kick</h2>
+                    <p>Kicks any unit in the specified direction for x amount of units</p>
+                </div>
+            </d2hc-hero-ability>
+            <d2hc-hero-ability src="../../images/es_ability_04.jpg" alt="es kick">
+                <div class="tooltip-wrapper" tip>
+                    <h2>Earth spirit kick</h2>
+                    <p>Kicks any unit in the specified direction for x amount of units</p>
+                </div>
+            </d2hc-hero-ability>
+            <d2hc-hero-ability src="../../images/es_ability_05.jpg" alt="es kick">
+                <div class="tooltip-wrapper" tip>
+                    <h2>Earth spirit kick</h2>
+                    <p>Kicks any unit in the specified direction for x amount of units</p>
+                </div>
+            </d2hc-hero-ability>
         </div>
-    </d2hc-hero-ability>
-    <d2hc-hero-ability src="../../images/es_ability_03.jpg" alt="es kick">
-        <div class="tooltip-wrapper" tip>
-            <h2>Earth spirit kick</h2>
-            <p>Kicks any unit in the specified direction for x amount of units</p>
-        </div>
-    </d2hc-hero-ability>
-    <d2hc-hero-ability src="../../images/es_ability_04.jpg" alt="es kick">
-        <div class="tooltip-wrapper" tip>
-            <h2>Earth spirit kick</h2>
-            <p>Kicks any unit in the specified direction for x amount of units</p>
-        </div>
-    </d2hc-hero-ability>
+    </div>
   </template>
   <script>
     (function () {

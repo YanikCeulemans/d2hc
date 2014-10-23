@@ -1,3 +1,11 @@
 :host {
-  display: inline-block;
+  display: block;
+  padding: 0;
+  margin: 1px;
+}
+
+:host img{
+	vertical-align: middle;
+	border-top: 1px solid #CECECE;
+	border-left: 1px solid #AFAFAF;
 }
