@@ -8,11 +8,16 @@
 	padding: 10px;
 }
 
+:host .name-container img{
+	vertical-align: middle;
+}
+
 :host .hero-name {
 	color: #ececec;
 	margin: 0;
 	font-weight: normal;
 	text-transform: uppercase;
+	line-height: 1;
 }
 
 :host .hero-abilities-wrapper {
