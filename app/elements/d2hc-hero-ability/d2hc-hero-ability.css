@@ -1,11 +1,22 @@
+:host [unresolved]{
+    opacity: 0;
+}
+
+:host [resolved]{
+    opacity: 100;
+}
+
 :host {
   display: block;
   padding: 0;
   margin: 0;
 }
 
-:host img{
+:host #image{
 	vertical-align: middle;
 	border-top: 1px solid #CECECE;
 	border-left: 1px solid #AFAFAF;
+    width: 46px;
+    height: 46px;
+    transition: opacity ease-in 0.2s;
 }

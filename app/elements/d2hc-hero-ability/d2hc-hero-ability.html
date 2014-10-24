@@ -2,19 +2,26 @@
 <link rel="import" href="../../bower_components/core-tooltip/core-tooltip.html">
 
 <polymer-element name="d2hc-hero-ability" attributes="src alt">
-  <template>
-    <link rel="stylesheet" href="d2hc-hero-ability.css">
-    <core-tooltip position="right">
-        <img src="{{src}}" alt="{{alt}}" />
-        <content select="[tip]"></content>
-    </core-tooltip>
-  </template>
+    <template>
+        <link rel="stylesheet" href="d2hc-hero-ability.css">
+        <core-tooltip position="right">
+            <img id="image" src="{{src}}" alt="{{alt}}" width="46" height="46" />
+            <content select="[tip]"></content>
+        </core-tooltip>
+    </template>
   <script>
     (function () {
       'use strict';
 
       Polymer({
-        // define element prototype here
+        ready: function(){
+            var img = this.$.image;
+            img.setAttribute('unresolved', '');
+            img.onload = function(){
+                img.setAttribute('resolved', '');
+                img.removeAttribute('unresolved', '');
+            }
+        }
       });
 
     })();

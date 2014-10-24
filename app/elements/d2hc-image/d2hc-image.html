@@ -1,0 +1,22 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<polymer-element name="d2hc-image" extends="img">
+  <script>
+    (function () {
+      'use strict';
+
+      Polymer({
+        ready: function(){
+          this.setAttribute('unresolved', '');
+          this.onload = function(){
+            this.setAttribute('resolved', '');
+            this.removeAttribute('unresolved');
+          };
+          console.log(this.onload);
+          this.onload();
+        }
+      });
+
+    })();
+  </script>
+</polymer-element>

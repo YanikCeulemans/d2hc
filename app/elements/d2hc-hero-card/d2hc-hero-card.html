@@ -1,46 +1,25 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../d2hc-hero-ability/d2hc-hero-ability.html">
 
-<polymer-element name="d2hc-hero-card" attributes="">
+<polymer-element name="d2hc-hero-card" attributes="herodata">
   <template>
     <link rel="stylesheet" href="d2hc-hero-card.css">
-    <div layout vertical center>
+    <div id="wrapper" layout vertical center>
         <div class="name-container" self-stretch layout horizontal justified>
-            <h2 class="hero-name" flex self-end>Earth Spirit</h2>
-            <img src="../../images/hero-type-str.png" alt="Strength hero">
+            <h2 class="hero-name" flex self-end>{{herodata.name}}</h2>
+            <img id="prime" src="{{getPrimePath(herodata.prime)}}" alt="Strength hero" width="31" height="33">
         </div>
-        <img src="../../images/es_portrait.jpg" alt="Hero image" class="portrait">
+        <img src="{{herodata.portrait}}" alt="Hero image" id="portrait" width="268" height="262">
         <div layout horizontal justified self-stretch class="hero-abilities-wrapper">
-            <d2hc-hero-ability src="../../images/es_ability_01.jpg" alt="es kick">
-            <div class="tooltip-wrapper" tip>
-                <h2>Earth spirit kick</h2>
-                <p>Kicks any unit in the specified direction for x amount of units</p>
-            </div>
-            </d2hc-hero-ability>
-            <d2hc-hero-ability src="../../images/es_ability_02.jpg" alt="es kick">
-                <div class="tooltip-wrapper" tip>
-                    <h2>Earth spirit kick</h2>
-                    <p>Kicks any unit in the specified direction for x amount of units</p>
-                </div>
-            </d2hc-hero-ability>
-            <d2hc-hero-ability src="../../images/es_ability_03.jpg" alt="es kick">
-                <div class="tooltip-wrapper" tip>
-                    <h2>Earth spirit kick</h2>
-                    <p>Kicks any unit in the specified direction for x amount of units</p>
-                </div>
-            </d2hc-hero-ability>
-            <d2hc-hero-ability src="../../images/es_ability_04.jpg" alt="es kick">
-                <div class="tooltip-wrapper" tip>
-                    <h2>Earth spirit kick</h2>
-                    <p>Kicks any unit in the specified direction for x amount of units</p>
-                </div>
-            </d2hc-hero-ability>
-            <d2hc-hero-ability src="../../images/es_ability_05.jpg" alt="es kick">
-                <div class="tooltip-wrapper" tip>
-                    <h2>Earth spirit kick</h2>
-                    <p>Kicks any unit in the specified direction for x amount of units</p>
-                </div>
-            </d2hc-hero-ability>
+            <span id="ability-space-reserve"></span>
+            <template repeat="{{ability in herodata.abilities}}">
+                <d2hc-hero-ability src="{{ability.img}}" alt="img alt">
+                    <div tip>
+                        <h2>{{ability.name}}</h2>
+                        <p>{{ability.description}}</p>
+                    </div>
+                </d2hc-hero-ability>
+            </template>
         </div>
     </div>
   </template>
@@ -49,7 +28,31 @@
       'use strict';
 
       Polymer({
-        // define element prototype here
+        created: function(){
+            this.herodata = {};
+        },
+        ready: function() {
+            var images = this.$.wrapper.querySelectorAll('img'), i = 0, 
+                len = images.length;
+            for (; i < len; i++){
+                var currImg = images[i];
+                currImg.setAttribute('unresolved', '');
+                currImg.onload = function(){
+                    this.setAttribute('resolved', '');
+                    this.removeAttribute('unresolved');
+                }
+            }
+        },
+        setData: function(data){
+            this.herodata = data;
+            console.log(this.herodata);
+        },
+        getPrimePath: function(type){
+            if (type){
+                return '/images/hero-type-' + type + '.png';
+            }
+            return '';
+        }
       });
 
     })();
