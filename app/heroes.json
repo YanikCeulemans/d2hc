@@ -1,32 +1,59 @@
 [{
-	"name": "Earth Spirit",
-	"prime": "str",
-	"portrait": "/images/es_portrait.jpg",
-	"abilities": [
-		{
-			"name": "Kick",
-			"description": "Kicks any unit of x units of distance",
-			"img": "/images/es_ability_01.jpg"
-		},
-		{
-			"name": "Roll",
-			"description": "Kicks any unit of x units of distance",
-			"img": "/images/es_ability_02.jpg"
-		},
-		{
-			"name": "Pull",
-			"description": "Kicks any unit of x units of distance",
-			"img": "/images/es_ability_03.jpg"
-		},
-		{
-			"name": "Stone",
-			"description": "Kicks any unit of x units of distance",
-			"img": "/images/es_ability_04.jpg"
-		},
-		{
-			"name": "Ult",
-			"description": "Kicks any unit of x units of distance",
-			"img": "/images/es_ability_05.jpg"
-		}
-	]
+    "name": "Earth Spirit",
+    "prime": "str",
+    "portrait": "/webm/npc_dota_hero_earth_spirit.webm.webm",
+    "abilities": [
+        {
+            "name": "Kick",
+            "description": "Kicks any unit of x units of distance",
+            "img": "/images/es_ability_01.jpg"
+        },
+        {
+            "name": "Roll",
+            "description": "Kicks any unit of x units of distance",
+            "img": "/images/es_ability_02.jpg"
+        },
+        {
+            "name": "Pull",
+            "description": "Kicks any unit of x units of distance",
+            "img": "/images/es_ability_03.jpg"
+        },
+        {
+            "name": "Stone",
+            "description": "Kicks any unit of x units of distance",
+            "img": "/images/es_ability_04.jpg"
+        },
+        {
+            "name": "Ult",
+            "description": "Kicks any unit of x units of distance",
+            "img": "/images/es_ability_05.jpg"
+        }
+    ]
+},
+{
+    "name": "Crystal Maiden",
+    "prime": "int",
+    "portrait": "/webm/npc_dota_hero_crystal_maiden.webm.webm",
+    "abilities": [
+        {
+            "name": "Aoe slow",
+            "description": "Kicks any unit of x units of distance",
+            "img": "/images/es_ability_01.jpg"
+        },
+        {
+            "name": "Stun",
+            "description": "Kicks any unit of x units of distance",
+            "img": "/images/es_ability_02.jpg"
+        },
+        {
+            "name": "Mana regen",
+            "description": "Kicks any unit of x units of distance",
+            "img": "/images/es_ability_03.jpg"
+        },
+        {
+            "name": "Ult",
+            "description": "Kicks any unit of x units of distance",
+            "img": "/images/es_ability_04.jpg"
+        }
+    ]
 }]

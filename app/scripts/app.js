@@ -5,10 +5,18 @@
     // Perform some behaviour
     console.log('Polymer is ready to rock!');
     var ajax = document.querySelector('core-ajax'),
-        d2hc = document.querySelector('d2hc-hero-card');
+        body = document.querySelector('body'),
+        createCard = function(data){
+          var card = document.createElement('d2hc-hero-card');
+          card.setData(data);
+          return card;
+        };
 
     ajax.addEventListener('core-response', function(e){
-        d2hc.setData(this.response[0]);
+        this.response.forEach(function(hero){
+          var card = createCard(hero);
+          body.appendChild(card);
+        });
     });
 
     ajax.go();

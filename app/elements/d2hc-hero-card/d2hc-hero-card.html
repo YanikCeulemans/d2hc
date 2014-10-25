@@ -10,7 +10,7 @@
             <h2 class="hero-name" flex self-end>{{herodata.name}}</h2>
             <d2hc-image src="{{getPrimePath(herodata.prime)}}" alt="Strength hero" width="31" height="33"></d2hc-image>
         </div>
-        <d2hc-image src="{{herodata.portrait}}" alt="Hero portrait" width="268" height="262"></d2hc-image>
+        <video id="webm" autoplay loop src="{{herodata.portrait}}" width="256" height="256"></video>
         <div layout horizontal justified self-stretch class="hero-abilities-wrapper">
             <span id="ability-space-reserve"></span>
             <template repeat="{{ability in herodata.abilities}}">

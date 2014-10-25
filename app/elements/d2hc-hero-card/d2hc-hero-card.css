@@ -12,18 +12,19 @@
 }
 
 :host {
-  display: inline-block;
-  background-color: #0D0E13;
-  box-shadow: 0 0 50px 7px #83bbf6;
-  transition: box-shadow ease-in 0.2s;
-  transition: opacity ease-in 0.2s;
+    display: inline-block;
+    background-color: #0D0E13;
+    box-shadow: 0 0 50px 7px #83bbf6;
+    transition: box-shadow ease-in 0.2s;
+    transition: opacity ease-in 0.2s;
+    position: relative;
 }
 
 :host .name-container {
     padding: 10px;
     border-bottom: 1px solid #0d0d0d;
     box-shadow: 0 5px 5px 0 rgba(0,0,0,0.4);
-    z-index: 2;
+    z-index: 1;
 }
 
 :host .name-container img{
@@ -43,9 +44,16 @@
     padding: 20px 10px 10px 10px;
     box-shadow: 0 -5px 5px 0 rgba(0,0,0,0.4);
     border-top: 1px solid #0d0d0d;
+    background-color: rgba(13,14,19,0.9);
+    z-index: 1;
+    margin-top: -30px;
 }
 
 :host #ability-space-reserve{
     height: 47px;
     width: 0;
+}
+
+:host #webm{
+    /*transform: scaleY(1.3);*/
 }
