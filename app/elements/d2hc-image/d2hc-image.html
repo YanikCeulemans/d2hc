@@ -1,22 +1,34 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 
-<polymer-element name="d2hc-image" extends="img">
-  <script>
+<polymer-element name="d2hc-image" attributes="src alt width height">
+    <template>
+        <style>
+            #img{
+                transition: opacity ease-in 0.2s;
+            }
+            #img[resolved]{
+                opacity: 100;
+            }
+            #img[unresolved]{
+                opacity: 0;
+            }
+        </style>
+        <img id="img" src="{{src}}" alt="{{alt}}" width="{{width}}" height="{{height}}">
+    </template>
+    <script>
     (function () {
-      'use strict';
+        'use strict';
 
-      Polymer({
-        ready: function(){
-          this.setAttribute('unresolved', '');
-          this.onload = function(){
-            this.setAttribute('resolved', '');
-            this.removeAttribute('unresolved');
-          };
-          console.log(this.onload);
-          this.onload();
-        }
-      });
-
+        Polymer({
+            ready: function(){
+                var img = this.$.img;
+                img.setAttribute('unresolved', '');
+                img.onload = function(){
+                    this.setAttribute('resolved', '');
+                    this.removeAttribute('unresolved');
+                };
+            }
+        });
     })();
-  </script>
+    </script>
 </polymer-element>

@@ -1,5 +1,6 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../d2hc-hero-ability/d2hc-hero-ability.html">
+<link rel="import" href="../../elements/d2hc-image/d2hc-image.html">
 
 <polymer-element name="d2hc-hero-card" attributes="herodata">
   <template>
@@ -7,9 +8,9 @@
     <div id="wrapper" layout vertical center>
         <div class="name-container" self-stretch layout horizontal justified>
             <h2 class="hero-name" flex self-end>{{herodata.name}}</h2>
-            <img id="prime" src="{{getPrimePath(herodata.prime)}}" alt="Strength hero" width="31" height="33">
+            <d2hc-image src="{{getPrimePath(herodata.prime)}}" alt="Strength hero" width="31" height="33"></d2hc-image>
         </div>
-        <img src="{{herodata.portrait}}" alt="Hero image" id="portrait" width="268" height="262">
+        <d2hc-image src="{{herodata.portrait}}" alt="Hero portrait" width="268" height="262"></d2hc-image>
         <div layout horizontal justified self-stretch class="hero-abilities-wrapper">
             <span id="ability-space-reserve"></span>
             <template repeat="{{ability in herodata.abilities}}">
@@ -30,18 +31,6 @@
       Polymer({
         created: function(){
             this.herodata = {};
-        },
-        ready: function() {
-            var images = this.$.wrapper.querySelectorAll('img'), i = 0, 
-                len = images.length;
-            for (; i < len; i++){
-                var currImg = images[i];
-                currImg.setAttribute('unresolved', '');
-                currImg.onload = function(){
-                    this.setAttribute('resolved', '');
-                    this.removeAttribute('unresolved');
-                }
-            }
         },
         setData: function(data){
             this.herodata = data;

@@ -14,7 +14,6 @@
     <!-- endbuild-->
     
     <link rel="import" href="bower_components/core-ajax/core-ajax.html">
-    <link rel="import" href="elements/d2hc-image/d2hc-image.html">
 
     <script src="bower_components/platform/platform.js"></script>
     <!-- build:vulcanized elements/elements.vulcanized.html -->
@@ -25,8 +24,6 @@
 <body unresolved fullbleed layout horizontal center center-justified>
     <core-ajax url="/heroes.json" handleAs="json"></core-ajax>
     <d2hc-hero-card></d2hc-hero-card>
-    
-    <img src="/images/es_portrait.jpg" alt="alt" is="d2hc-image"></img>
 
     <!-- build:js scripts/app.js -->
     <script src="scripts/app.js"></script>
