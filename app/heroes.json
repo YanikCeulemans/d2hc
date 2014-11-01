@@ -4,29 +4,29 @@
     "portrait": "/webm/npc_dota_hero_earth_spirit.webm.webm",
     "abilities": [
         {
-            "name": "Kick",
+            "name": "Boulder Smash",
             "description": "Kicks any unit of x units of distance",
-            "img": "/images/es_ability_01.jpg"
+            "img": "/images/abilities/earth_spirit_boulder_smash.png"
         },
         {
-            "name": "Roll",
+            "name": "Rolling Boulder",
             "description": "Kicks any unit of x units of distance",
-            "img": "/images/es_ability_02.jpg"
+            "img": "/images/abilities/earth_spirit_rolling_boulder.png"
         },
         {
-            "name": "Pull",
+            "name": "Geomagnetic Grip",
             "description": "Kicks any unit of x units of distance",
-            "img": "/images/es_ability_03.jpg"
+            "img": "/images/abilities/earth_spirit_geomagnetic_grip.png"
         },
         {
-            "name": "Stone",
+            "name": "Call stone",
             "description": "Kicks any unit of x units of distance",
-            "img": "/images/es_ability_04.jpg"
+            "img": "/images/abilities/earth_spirit_stone_caller.png"
         },
         {
-            "name": "Ult",
+            "name": "Magnetize",
             "description": "Kicks any unit of x units of distance",
-            "img": "/images/es_ability_05.jpg"
+            "img": "/images/abilities/earth_spirit_magnetize.png"
         }
     ]
 },
@@ -36,24 +36,24 @@
     "portrait": "/webm/npc_dota_hero_crystal_maiden.webm.webm",
     "abilities": [
         {
-            "name": "Aoe slow",
+            "name": "Crystal Nova",
             "description": "Kicks any unit of x units of distance",
-            "img": "/images/es_ability_01.jpg"
+            "img": "/images/abilities/crystal_maiden_crystal_nova.png"
         },
         {
-            "name": "Stun",
+            "name": "Frostbite",
             "description": "Kicks any unit of x units of distance",
-            "img": "/images/es_ability_02.jpg"
+            "img": "/images/abilities/crystal_maiden_frostbite.png"
         },
         {
-            "name": "Mana regen",
+            "name": "Brilliance Aura",
             "description": "Kicks any unit of x units of distance",
-            "img": "/images/es_ability_03.jpg"
+            "img": "/images/abilities/crystal_maiden_brilliance_aura.png"
         },
         {
-            "name": "Ult",
+            "name": "Freezing field",
             "description": "Kicks any unit of x units of distance",
-            "img": "/images/es_ability_04.jpg"
+            "img": "/images/abilities/crystal_maiden_freezing_field.png"
         }
     ]
 }]
